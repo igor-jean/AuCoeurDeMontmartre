@@ -1,0 +1,115 @@
+footer {
+    background: #182C39;
+
+
+    .topFooter {
+        height: 200px;
+        padding-top: 30px;
+        align-items: flex-start;
+        font-family: 'Caveat', cursive;
+        color: white;
+
+        h3 {
+            color: #EF0000;
+            text-transform: uppercase;
+            margin-bottom: 7px;
+        }
+
+        a:hover {
+            color: #EF0000;
+        }
+    }
+
+    .map {
+        background: white;
+        height: 450px;
+        position: relative;
+        overflow: hidden;
+
+        p {
+            font-family: 'Caveat', cursive;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            padding: 15px 0;
+            font-family: 'Caveat', cursive;
+            font-size: 2.5rem;
+        }
+    }
+
+    .social {
+        @include center;
+        gap: 30px;
+        margin: 30px auto;
+
+        .fa-x-twitter:hover {
+            color: #00aced;
+
+        }
+
+        .fa-facebook-f:hover {
+            color: #0866FF;
+        }
+
+        .fa-instagram:hover {
+            color: red
+        }
+
+        >a>i {
+            display: block;
+            width: 60px;
+            height: 60px;
+            font-size: 2.5rem;
+            background: rgb(255, 255, 255);
+            text-align: center;
+            padding: 10px;
+            border-radius: 100%;
+            transition: 0.3s ease;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            ;
+
+            &:hover {
+                box-shadow:
+                    rgba(0, 0, 0, 0.20) 0px -23px 10px 0px inset,
+                    rgba(0, 0, 0, 0.20) 0px -36px 5px 0px inset,
+                    /* Réduction du flou ici */
+                    rgba(0, 0, 0, 0.1) 0px -79px 10px 0px inset,
+                    rgba(0, 0, 0, 0.06) 0px 2px 1px,
+                    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+                    rgba(0, 0, 0, 0.09) 0px 8px 4px,
+                    rgba(0, 0, 0, 0.09) 0px 16px 8px,
+                    rgba(0, 0, 0, 0.09) 0px 32px 10px;
+
+            }
+        }
+    }
+
+    .bottomFooter {
+        height: 30px;
+        position: relative;
+        overflow: hidden;
+
+        a:hover {
+            color: #EF0000;
+        }
+
+        p {
+            text-align: center;
+            color: white;
+        }
+
+
+    }
+
+
+}
+
+.barreFooter {
+    height: 100px;
+    width: 100%;
+    background: #182C39;
+    transform: skewY(-3deg);
+    position: absolute;
+    bottom: -60px;
+}

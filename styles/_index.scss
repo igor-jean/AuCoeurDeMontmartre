@@ -1,0 +1,161 @@
+.indexGrid {
+    display: grid;
+    grid-template-columns: 30% 60%;
+    justify-content: center;
+
+    aside {
+        border: 5px solid;
+        border-image: linear-gradient(180deg, rgba(255, 165, 0, 1) 0%, rgba(255, 255, 255, 1) 40%);
+        border-image-slice: 1;
+        border-top: none;
+        border-radius: 5px;
+        margin-top: 150px;
+        position: relative;
+        padding: 50px 20px;
+
+        button {
+            display: block;
+            margin: 20px auto;
+            background: orange;
+            color: white;
+            text-transform: uppercase;
+            padding: 15px 30px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+            &:hover {
+                background: rgba(255, 166, 0, 0.7);
+            }
+        }
+
+        .actu {
+            h3 {
+                font-family: 'Overpass', sans-serif;
+                font-size: 2rem;
+                padding: 0px 0px 15px;
+                color: #ffa500;
+                line-height: 30px;
+            }
+
+            p {
+                padding: 15px 0px;
+                font-size: 1.3rem;
+                line-height: 25px;
+            }
+
+            .card {
+                background: rgb(236, 236, 236);
+                padding: 10px 10px;
+                border: 1px solid rgb(189, 189, 189);
+                margin-bottom: 20px;
+
+                i {
+                    color: #ffa500;
+                }
+            }
+
+        }
+
+        div {
+
+            .appart {
+                display: block;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+
+        &::before {
+            content: "ACTUS";
+            width: 95%;
+            height: 40px;
+            background: #ffa500;
+            color: white;
+            position: absolute;
+            top: -27px;
+            left: -5px;
+            transform: skewY(-3deg);
+            border: 5px solid orange;
+            border-bottom: none;
+            font-size: 2rem;
+            padding-left: 5%;
+        }
+    }
+
+    section {
+        padding: 50px;
+
+        h1 {
+            font-size: 4.5rem;
+            text-align: center;
+            text-shadow: black 2px 2px 2px;
+        }
+
+        p {
+            padding: 15px 0px;
+            font-size: 1.2rem;
+            text-indent: 15px;
+            line-height: 30px;
+            color: rgb(92, 66, 66);
+
+            &::first-letter {
+                font-weight: 900;
+                font-size: 2rem;
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-shadow: black 1px 1px 1px;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 1.7rem;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        figure {
+            @include center;
+            flex-direction: column;
+
+            img {
+                width: 300px;
+            }
+
+            figcaption {
+                background: rgb(19, 14, 14);
+                color: white;
+                text-align: center;
+                padding: 5px;
+                width: 300px;
+            }
+
+
+
+
+        }
+
+        .imgBox {
+            @include center;
+            gap: 5px;
+
+            img {
+                height: 200px;
+            }
+
+        }
+
+        .airbnb-embed-frame {
+            width: 60%;
+        }
+
+
+
+    }
+}

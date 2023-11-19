@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  color: black;
+}
+
+.container {
+  width: 70%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titre {
+  color: #EF0000;
+  font-family: "Caveat", cursive;
+  letter-spacing: 3px;
+}
+
+.barre {
+  width: 80%;
+  height: 2px;
+  background: rgba(128, 128, 128, 0.441);
+  margin: 30px auto;
+  border-radius: 3px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background: scroll no-repeat center/cover url(img/homeBackground.jpg);
+  height: 100vh;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+header .headerTop {
+  height: 150px;
+  background: rgba(0, 0, 0, 0.74);
+  padding-top: 10px;
+}
+header .headerTop > div {
+  height: 100%;
+  width: 90%;
+  align-items: flex-start;
+}
+
+nav {
+  height: 20px;
+}
+nav ul:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: normal;
+  gap: 20px;
+}
+nav ul:first-child li {
+  text-transform: uppercase;
+  position: relative;
+}
+nav ul:first-child li:hover {
+  color: #EF0000;
+}
+nav ul:first-child li:before, nav ul:first-child li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  display: block;
+  height: 2px;
+  transition: all 0.3s ease;
+  margin-top: 2px;
+  background-color: #EF0000;
+}
+nav ul:first-child li:after {
+  bottom: -5px;
+  left: -5px;
+}
+nav ul:first-child li:before {
+  top: -5px;
+  right: -5px;
+}
+nav ul:first-child li:hover::after {
+  width: 100%;
+}
+nav ul:first-child li:hover::before {
+  width: 100%;
+}
+nav ul:first-child li:nth-child(2):hover > ul {
+  display: block;
+}
+nav ul:nth-child(2) {
+  display: none;
+}
+nav ul:nth-child(2) li a {
+  color: white;
+}
+nav ul:nth-child(2) li a:hover {
+  color: #EF0000;
+}
+nav ul:nth-child(2) li::after, nav ul:nth-child(2) li::before {
+  content: none;
+}
+
+.headerTop > div > div:last-child {
+  display: flex;
+  gap: 25px;
+}
+.headerTop > div > div:last-child .fa-brands {
+  font-size: 2rem;
+}
+.headerTop > div > div:last-child .fa-square-x-twitter:hover {
+  color: #00aced;
+}
+.headerTop > div > div:last-child .fa-square-facebook:hover {
+  color: #0866FF;
+}
+.headerTop > div > div:last-child .fa-instagram:hover {
+  color: red;
+}
+
+.bottomHome {
+  height: 100px;
+  width: 100%;
+  background: white;
+  transform: skewY(-3deg);
+  position: absolute;
+  bottom: -50px;
+}
+
+.headerTop > div > div {
+  display: flex;
+  width: 18vw;
+}
+.headerTop > div > div input[type=text] {
+  width: 100%;
+  border: 3px solid #EF0000;
+  border-right: none;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: black;
+}
+.headerTop > div > div button[type=submit] {
+  width: 40px;
+  height: 30px;
+  border: 1px solid #EF0000;
+  background: #EF0000;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+footer {
+  background: #182C39;
+}
+footer .topFooter {
+  height: 200px;
+  padding-top: 30px;
+  align-items: flex-start;
+  font-family: "Caveat", cursive;
+  color: white;
+}
+footer .topFooter h3 {
+  color: #EF0000;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+footer .topFooter a:hover {
+  color: #EF0000;
+}
+footer .map {
+  background: white;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+footer .map p {
+  font-family: "Caveat", cursive;
+  margin-bottom: 10px;
+}
+footer .map h3 {
+  padding: 15px 0;
+  font-family: "Caveat", cursive;
+  font-size: 2.5rem;
+}
+footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px auto;
+}
+footer .social .fa-x-twitter:hover {
+  color: #00aced;
+}
+footer .social .fa-facebook-f:hover {
+  color: #0866FF;
+}
+footer .social .fa-instagram:hover {
+  color: red;
+}
+footer .social > a > i {
+  display: block;
+  width: 60px;
+  height: 60px;
+  font-size: 2.5rem;
+  background: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  border-radius: 100%;
+  transition: 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+footer .social > a > i:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px -23px 10px 0px inset, rgba(0, 0, 0, 0.2) 0px -36px 5px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 10px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 10px;
+}
+footer .bottomFooter {
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+}
+footer .bottomFooter a:hover {
+  color: #EF0000;
+}
+footer .bottomFooter p {
+  text-align: center;
+  color: white;
+}
+
+.barreFooter {
+  height: 100px;
+  width: 100%;
+  background: #182C39;
+  transform: skewY(-3deg);
+  position: absolute;
+  bottom: -60px;
+}
+
+main {
+  background: white;
+}
+
+.indexGrid {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  justify-content: center;
+}
+.indexGrid aside {
+  border: 5px solid;
+  border-image: linear-gradient(180deg, rgb(255, 165, 0) 0%, rgb(255, 255, 255) 40%);
+  border-image-slice: 1;
+  border-top: none;
+  border-radius: 5px;
+  margin-top: 150px;
+  position: relative;
+  padding: 50px 20px;
+}
+.indexGrid aside button {
+  display: block;
+  margin: 20px auto;
+  background: orange;
+  color: white;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.indexGrid aside button:hover {
+  background: rgba(255, 166, 0, 0.7);
+}
+.indexGrid aside .actu h3 {
+  font-family: "Overpass", sans-serif;
+  font-size: 2rem;
+  padding: 0px 0px 15px;
+  color: #ffa500;
+  line-height: 30px;
+}
+.indexGrid aside .actu p {
+  padding: 15px 0px;
+  font-size: 1.3rem;
+  line-height: 25px;
+}
+.indexGrid aside .actu .card {
+  background: rgb(236, 236, 236);
+  padding: 10px 10px;
+  border: 1px solid rgb(189, 189, 189);
+  margin-bottom: 20px;
+}
+.indexGrid aside .actu .card i {
+  color: #ffa500;
+}
+.indexGrid aside div .appart {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+.indexGrid aside::before {
+  content: "ACTUS";
+  width: 95%;
+  height: 40px;
+  background: #ffa500;
+  color: white;
+  position: absolute;
+  top: -27px;
+  left: -5px;
+  transform: skewY(-3deg);
+  border: 5px solid orange;
+  border-bottom: none;
+  font-size: 2rem;
+  padding-left: 5%;
+}
+.indexGrid section {
+  padding: 50px;
+}
+.indexGrid section h1 {
+  font-size: 4.5rem;
+  text-align: center;
+  text-shadow: black 2px 2px 2px;
+}
+.indexGrid section p {
+  padding: 15px 0px;
+  font-size: 1.2rem;
+  text-indent: 15px;
+  line-height: 30px;
+  color: rgb(92, 66, 66);
+}
+.indexGrid section p::first-letter {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.indexGrid section h2 {
+  font-size: 2.5rem;
+  text-shadow: black 1px 1px 1px;
+  letter-spacing: 1px;
+}
+.indexGrid section h3 {
+  margin-top: 20px;
+  font-size: 1.7rem;
+  font-family: "Overpass", sans-serif;
+}
+.indexGrid section figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.indexGrid section figure img {
+  width: 300px;
+}
+.indexGrid section figure figcaption {
+  background: rgb(19, 14, 14);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  width: 300px;
+}
+.indexGrid section .imgBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.indexGrid section .imgBox img {
+  height: 200px;
+}
+.indexGrid section .airbnb-embed-frame {
+  width: 60%;
+}/*# sourceMappingURL=style.css.map */

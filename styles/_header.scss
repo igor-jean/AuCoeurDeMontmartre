@@ -1,0 +1,123 @@
+header {
+    background: scroll no-repeat center/cover url(img/homeBackground.jpg);
+    height: 100vh;
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+    .headerTop {
+        height: 150px;
+        background: rgba(0, 0, 0, 0.74);
+        padding-top: 10px;
+
+        >div {
+            height: 100%;
+            width: 90%;
+            align-items: flex-start;
+        }
+    }
+}
+
+// NAVBAR
+nav {
+    height: 20px;
+
+    ul:first-child {
+        @include center;
+        align-items: normal;
+        gap: 20px;
+
+        & li {
+            text-transform: uppercase;
+            position: relative;
+
+            &:hover {
+                color: #EF0000;
+            }
+        }
+
+        & li:before,
+        & li::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            display: block;
+            height: 2px;
+            transition: all 0.3s ease;
+            margin-top: 2px;
+            background-color: #EF0000;
+        }
+
+        & li:after {
+            bottom: -5px;
+            left: -5px;
+        }
+
+        & li:before {
+            top: -5px;
+            right: -5px;
+        }
+
+        & li:hover::after {
+            width: 100%;
+        }
+
+        & li:hover::before {
+            width: 100%;
+        }
+
+        & li:nth-child(2):hover>ul {
+            display: block;
+
+        }
+    }
+
+    ul:nth-child(2) {
+        display: none;
+
+        & li a {
+            color: white;
+
+            &:hover {
+                color: #EF0000;
+            }
+        }
+
+        & li::after,
+        & li::before {
+            content: none;
+        }
+    }
+}
+
+// LIEN RESEAUX
+.headerTop>div>div:last-child {
+    display: flex;
+    gap: 25px;
+
+    .fa-brands {
+        font-size: 2rem;
+    }
+
+    .fa-square-x-twitter:hover {
+        color: #00aced;
+    }
+
+    .fa-square-facebook:hover {
+        color: #0866FF;
+    }
+
+    .fa-instagram:hover {
+        color: red
+    }
+
+}
+
+.bottomHome {
+    height: 100px;
+    width: 100%;
+    background: white;
+    transform: skewY(-3deg);
+    position: absolute;
+    bottom: -50px;
+}
