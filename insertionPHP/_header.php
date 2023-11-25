@@ -1,3 +1,11 @@
+<?php
+    $pageActuelle = $_SERVER["PHP_SELF"];
+    $actu = strpos($pageActuelle, "actualite.php" );
+    $appart = strpos($pageActuelle, "appartement.php");
+    $index = stristr($pageActuelle, "index.php" );
+    $quartier = strpos($pageActuelle, "quartier.php");
+    $resa = strpos($pageActuelle, "reservation.php");
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,21 +16,21 @@
     <title>Au coeur de Montmartre</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="headerTop">
             <div class="flex container">
-                <img src="img/logo.png" alt="Logo">
+                <a id="logo" href="index.php"><img src="img/logo.png" alt="Logo"></a>
                 <nav>
                     <ul>
-                        <li><a href="index.php">Accueil</a></li>
-                        <li><a href="#">Présentation</a>
+                        <li><a href="index.php" <?php if($index){ echo "class='bold'";}?>>Accueil</a></li>
+                        <li><a href="" <?php if($quartier||$appart){ echo "class='bold'";}?>>Présentation</a>
                             <ul>
-                                <li><a href="quartier.php">Quartier</a></li>
-                                <li><a href="appartement.php">Appartement</a></li>
+                                <li><a href="quartier.php"<?php if($quartier){ echo "class='bold'";}?>>Quartier</a></li>
+                                <li><a href="appartement.php" <?php if($appart){ echo "class='bold'";}?>>Appartement</a></li>
                             </ul>
                         </li>
-                        <li><a href="actualite.php">Actualités</a></li>
-                        <li><a href="contact.php">Réservation</a></li>
+                        <li><a href="actualite.php" <?php if($actu){ echo "class='bold'";}?>>Actualités</a></li>
+                        <li><a href="reservation.php" <?php if($resa){ echo "class='bold'";}?>>Réservation</a></li>
                     </ul>
                 </nav>
                 <div>

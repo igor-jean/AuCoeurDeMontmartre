@@ -15,6 +15,16 @@ header {
             width: 90%;
             align-items: flex-start;
         }
+
+        #logo {
+            position: absolute;
+            top: 8px;
+            left: 20px;
+
+            img {
+                height: 150px;
+            }
+        }
     }
 }
 
@@ -32,7 +42,7 @@ nav {
             position: relative;
 
             &:hover {
-                color: #EF0000;
+                color: $colorSecondaire;
             }
         }
 
@@ -44,8 +54,7 @@ nav {
             display: block;
             height: 2px;
             transition: all 0.3s ease;
-            margin-top: 2px;
-            background-color: #EF0000;
+            background-color: $colorSecondaire;
         }
 
         & li:after {
@@ -54,7 +63,7 @@ nav {
         }
 
         & li:before {
-            top: -5px;
+            top: -7px;
             right: -5px;
         }
 
@@ -79,7 +88,7 @@ nav {
             color: white;
 
             &:hover {
-                color: #EF0000;
+                color: $colorSecondaire;
             }
         }
 
@@ -88,6 +97,11 @@ nav {
             content: none;
         }
     }
+}
+
+.bold {
+    font-weight: bold;
+    color: $colorSecondaire;
 }
 
 // LIEN RESEAUX
@@ -120,4 +134,5 @@ nav {
     transform: skewY(-3deg);
     position: absolute;
     bottom: -50px;
+    right: 0;
 }

@@ -1,22 +1,18 @@
 .indexGrid {
     display: grid;
-    grid-template-columns: 30% 60%;
+    grid-template-columns: 30% 70%;
     justify-content: center;
+    margin: 0 auto 150px;
+    width: 1400px;
 
     aside {
-        border: 5px solid;
-        border-image: linear-gradient(180deg, rgba(255, 165, 0, 1) 0%, rgba(255, 255, 255, 1) 40%);
-        border-image-slice: 1;
-        border-top: none;
-        border-radius: 5px;
-        margin-top: 150px;
-        position: relative;
-        padding: 50px 20px;
+        overflow: hidden;
+        margin-top: 100px;
 
         button {
             display: block;
             margin: 20px auto;
-            background: orange;
+            background: $colorPrimaire;
             color: white;
             text-transform: uppercase;
             padding: 15px 30px;
@@ -28,36 +24,101 @@
             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
             &:hover {
-                background: rgba(255, 166, 0, 0.7);
+                background: rgba(29, 32, 34, 0.853);
+            }
+        }
+
+        h2 {
+            background: $colorPrimaire;
+            color: #ffffff;
+            padding: 5px 15px;
+            display: inline-block;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 500%;
+                height: 2px;
+                background: $colorPrimaire;
+                position: absolute;
+                bottom: 0;
             }
         }
 
         .actu {
+            padding: 20px 10px;
+            overflow: hidden;
+
+
             h3 {
                 font-family: 'Overpass', sans-serif;
-                font-size: 2rem;
-                padding: 0px 0px 15px;
-                color: #ffa500;
-                line-height: 30px;
+                font-size: 1.2rem;
+                color: #201f1d;
+                letter-spacing: 0;
+                text-decoration: underline;
             }
 
             p {
                 padding: 15px 0px;
-                font-size: 1.3rem;
-                line-height: 25px;
+                font-size: 1rem;
             }
 
             .card {
-                background: rgb(236, 236, 236);
-                padding: 10px 10px;
-                border: 1px solid rgb(189, 189, 189);
-                margin-bottom: 20px;
+                margin-bottom: 60px;
+
+                >div {
+                    align-items: flex-start;
+                    gap: 15px;
+                }
+
+                .img {
+                    width: 120px;
+                    height: 120px;
+                    flex-shrink: 0;
+                }
+
+                .un {
+                    background: scroll center/cover url("img/marche.jpg");
+                }
+
+                .deux {
+                    background: scroll center/cover url("img/appartExt.jpg");
+                }
+
+                .trois {
+                    background: scroll center/cover url("img/dessin.jpg");
+                }
 
                 i {
-                    color: #ffa500;
+                    color: #ffffff;
+                }
+
+                .fa-newspaper {
+                    color: red
+                }
+
+                .fa-house {
+                    color: red;
                 }
             }
 
+            .separation {
+                width: 70%;
+                height: 1px;
+                background: $colorSecondaire;
+                margin: 50px auto;
+
+            }
+
+            .pub {
+                a {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
         }
 
         div {
@@ -69,21 +130,7 @@
             }
         }
 
-        &::before {
-            content: "ACTUS";
-            width: 95%;
-            height: 40px;
-            background: #ffa500;
-            color: white;
-            position: absolute;
-            top: -27px;
-            left: -5px;
-            transform: skewY(-3deg);
-            border: 5px solid orange;
-            border-bottom: none;
-            font-size: 2rem;
-            padding-left: 5%;
-        }
+
     }
 
     section {
@@ -92,7 +139,6 @@
         h1 {
             font-size: 4.5rem;
             text-align: center;
-            text-shadow: black 2px 2px 2px;
         }
 
         p {
@@ -100,7 +146,9 @@
             font-size: 1.2rem;
             text-indent: 15px;
             line-height: 30px;
-            color: rgb(92, 66, 66);
+            color: rgb(29 32 34);
+            width: 80%;
+            margin: 0 auto;
 
             &::first-letter {
                 font-weight: 900;
@@ -110,14 +158,17 @@
 
         h2 {
             font-size: 2.5rem;
-            text-shadow: black 1px 1px 1px;
             letter-spacing: 1px;
+            text-align: center;
         }
 
         h3 {
-            margin-top: 20px;
+            margin: 50px auto 0px;
             font-size: 1.7rem;
-            font-family: 'Overpass', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            color: $colorPrimaire;
+            width: 80%;
+
         }
 
         figure {
@@ -151,11 +202,9 @@
 
         }
 
-        .airbnb-embed-frame {
-            width: 60%;
+        .airbnb-embed-frame img {
+            width: 100%;
         }
-
-
 
     }
 }

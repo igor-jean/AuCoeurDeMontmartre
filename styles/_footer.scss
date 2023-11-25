@@ -1,106 +1,56 @@
 footer {
+    position: relative;
     background: #182C39;
-
+    padding-top: 70px;
 
     .topFooter {
-        height: 200px;
         padding-top: 30px;
         align-items: flex-start;
-        font-family: 'Caveat', cursive;
+        font-family: 'Roboto', sans-serif;
         color: white;
 
         h3 {
-            color: #EF0000;
+            color: $colorSecondaire;
             text-transform: uppercase;
             margin-bottom: 7px;
         }
 
-        a:hover {
-            color: #EF0000;
+        h4 {
+            color: $colorSecondaire;
         }
+
+        a:hover {
+            color: $colorSecondaire;
+        }
+
     }
 
     .map {
         background: white;
-        height: 450px;
+        height: 550px;
         position: relative;
         overflow: hidden;
 
         p {
-            font-family: 'Caveat', cursive;
+            font-family: 'Roboto', sans-serif;
             margin-bottom: 10px;
         }
 
         h3 {
             padding: 15px 0;
-            font-family: 'Caveat', cursive;
+            font-family: 'Roboto', sans-serif;
             font-size: 2.5rem;
         }
     }
 
-    .social {
-        @include center;
-        gap: 30px;
-        margin: 30px auto;
-
-        .fa-x-twitter:hover {
-            color: #00aced;
-
-        }
-
-        .fa-facebook-f:hover {
-            color: #0866FF;
-        }
-
-        .fa-instagram:hover {
-            color: red
-        }
-
-        >a>i {
-            display: block;
-            width: 60px;
-            height: 60px;
-            font-size: 2.5rem;
-            background: rgb(255, 255, 255);
-            text-align: center;
-            padding: 10px;
-            border-radius: 100%;
-            transition: 0.3s ease;
-            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-            ;
-
-            &:hover {
-                box-shadow:
-                    rgba(0, 0, 0, 0.20) 0px -23px 10px 0px inset,
-                    rgba(0, 0, 0, 0.20) 0px -36px 5px 0px inset,
-                    /* Réduction du flou ici */
-                    rgba(0, 0, 0, 0.1) 0px -79px 10px 0px inset,
-                    rgba(0, 0, 0, 0.06) 0px 2px 1px,
-                    rgba(0, 0, 0, 0.09) 0px 4px 2px,
-                    rgba(0, 0, 0, 0.09) 0px 8px 4px,
-                    rgba(0, 0, 0, 0.09) 0px 16px 8px,
-                    rgba(0, 0, 0, 0.09) 0px 32px 10px;
-
-            }
-        }
+    .copyright {
+        text-align: center;
+        color: white;
+        margin: 50px auto 10px
     }
 
-    .bottomFooter {
-        height: 30px;
-        position: relative;
-        overflow: hidden;
-
-        a:hover {
-            color: #EF0000;
-        }
-
-        p {
-            text-align: center;
-            color: white;
-        }
 
 
-    }
 
 
 }
@@ -111,5 +61,23 @@ footer {
     background: #182C39;
     transform: skewY(-3deg);
     position: absolute;
-    bottom: -60px;
+    top: -50px;
+}
+
+.logo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.gotop {
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    padding: 60px;
+
+    i {
+        font-size: 3rem;
+        color: white;
+    }
 }

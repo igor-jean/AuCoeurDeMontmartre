@@ -5,22 +5,26 @@
 
     input[type=text] {
         width: 100%;
-        border: 3px solid #EF0000;
+        border: 3px solid $colorSecondaire;
         border-right: none;
         padding: 5px;
         height: 30px;
         border-radius: 5px 0 0 5px;
         outline: none;
         color: black;
+
+        @media screen and (max-width: 1600px) {
+            width: 80%;
+        }
     }
 
     button[type=submit] {
         width: 40px;
         height: 30px;
-        border: 1px solid #EF0000;
-        background: #EF0000;
+        border: 1px solid $colorSecondaire;
+        background: $colorSecondaire;
         text-align: center;
-        color: #fff;
+        color: $colorPrimaire;
         border-radius: 0 5px 5px 0;
         cursor: pointer;
         font-size: 20px;
