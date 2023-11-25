@@ -467,4 +467,39 @@ main {
   display: grid;
   grid-template-columns: 45% 45%;
   justify-content: space-between;
+}
+
+.slider {
+  height: 450px;
+  width: 80%;
+  margin: 0 auto;
+  gap: 10px;
+  margin-bottom: 150px;
+}
+.slider .photo {
+  height: 100%;
+  width: 100px;
+  background: grey;
+  border-radius: 70px;
+  flex-shrink: 0;
+  transition: 1s;
+}
+.slider .shrink {
+  flex-shrink: 1;
+  width: 100%;
+}
+.slider .img1 {
+  background: scroll no-repeat center/cover url(img/slider1.jpg);
+}
+.slider .img2 {
+  background: scroll no-repeat center/cover url(img/slider2.jpg);
+}
+.slider .img3 {
+  background: scroll no-repeat center/cover url(img/slider3.jpg);
+}
+.slider .img4 {
+  background: scroll no-repeat center/cover url(img/slider4.jpg);
+}
+.slider .img5 {
+  background: scroll no-repeat center/cover url(img/slider5.jpg);
 }/*# sourceMappingURL=style.css.map */

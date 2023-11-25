@@ -39,9 +39,33 @@
                 Montmartre, avec son passé coloré et son présent dynamique, continue de séduire les amateurs d'art, les rêveurs, et les curieux. Entre ses rues pavées, ses vues panoramiques, et son esprit bohème, ce quartier demeure une invitation à s'immerger dans l'essence même de Paris, une expérience intemporelle où l'histoire et la créativité se mêlent pour créer une atmosphère unique au monde.
             </p>
         </section>
-        <section>
-            
-        </section>
     </div>
+    <section class="slider flex">
+    <div class="photo img1 shrink"></div>
+    <div class="photo img2"></div>
+    <div class="photo img3"></div>
+    <div class="photo img4"></div>
+    <div class="photo img5"></div>
+</section>
+<script>
+    const img1 = document.querySelector(".img1");
+    const img2 = document.querySelector(".img2");
+    const img3 = document.querySelector(".img3");
+    const img4 = document.querySelector(".img4");
+    const img5 = document.querySelector(".img5");
+
+    const images = [img1, img2, img3, img4, img5];
+    let currentIndex = 0;
+
+    function toggleShrink() {
+        images.forEach(img => img.classList.remove("shrink"));
+        images[currentIndex].classList.add("shrink");
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    setInterval(toggleShrink, 3000); // Appelle la fonction toutes les 5 secondes
+</script>
+
+
 </main>
 <?php require_once "insertionPHP/_footer.php" ; ?>
