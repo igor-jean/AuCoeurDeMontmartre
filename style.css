@@ -9,6 +9,7 @@
 body {
   font-family: "Overpass", sans-serif;
   color: black;
+  background-color: white;
 }
 
 html {
@@ -17,12 +18,17 @@ html {
 
 .container {
   width: 70%;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 @media screen and (max-width: 1600px) {
   .container {
     max-width: 1100px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .container {
+    max-width: 700px;
   }
 }
 
@@ -59,18 +65,26 @@ header {
   background: scroll no-repeat center/cover url(img/homeBackground.jpg);
   height: 100vh;
   color: white;
-  position: relative;
-  overflow: hidden;
 }
 header .headerTop {
   height: 150px;
   background: rgba(0, 0, 0, 0.74);
-  padding-top: 10px;
+  padding: 15px;
+}
+@media screen and (max-width: 1040px) {
+  header .headerTop {
+    height: 100px;
+  }
 }
 header .headerTop > div {
   height: 100%;
   width: 90%;
   align-items: flex-start;
+}
+@media screen and (max-width: 1040px) {
+  header .headerTop > div {
+    justify-content: center;
+  }
 }
 header .headerTop #logo {
   position: absolute;
@@ -80,9 +94,19 @@ header .headerTop #logo {
 header .headerTop #logo img {
   height: 150px;
 }
+@media screen and (max-width: 1040px) {
+  header .headerTop #logo img {
+    height: 100px;
+  }
+}
 
 nav {
   height: 20px;
+}
+@media screen and (max-width: 800px) {
+  nav {
+    display: none;
+  }
 }
 nav ul:first-child {
   display: flex;
@@ -124,6 +148,19 @@ nav ul:first-child li:hover::before {
 nav ul:first-child li:nth-child(2):hover > ul {
   display: block;
 }
+@media screen and (max-width: 1040px) {
+  nav ul:first-child li:nth-child(2) {
+    display: none;
+  }
+}
+nav .navResp {
+  display: none;
+}
+@media screen and (max-width: 1040px) {
+  nav .navResp {
+    display: block;
+  }
+}
 nav ul:nth-child(2) {
   display: none;
 }
@@ -140,38 +177,70 @@ nav ul:nth-child(2) li::after, nav ul:nth-child(2) li::before {
 .bold {
   font-weight: bold;
   color: #C99D46;
+  position: relative;
+}
+
+.under:before, .under:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  display: block;
+  height: 2px;
+  transition: all 0.3s ease;
+  background-color: #C99D46;
+}
+.under:after {
+  bottom: -5px;
+  left: -5px;
+}
+.under:before {
+  top: -7px;
+  right: -5px;
 }
 
 .headerTop > div > div:last-child {
   display: flex;
+  justify-content: flex-end;
   gap: 25px;
 }
 .headerTop > div > div:last-child .fa-brands {
   font-size: 2rem;
 }
-.headerTop > div > div:last-child .fa-square-x-twitter:hover {
-  color: #00aced;
-}
-.headerTop > div > div:last-child .fa-square-facebook:hover {
-  color: #0866FF;
-}
-.headerTop > div > div:last-child .fa-instagram:hover {
-  color: red;
+@media screen and (max-width: 1450px) {
+  .headerTop > div > div:last-child {
+    display: none;
+  }
 }
 
-.bottomHome {
-  height: 100px;
-  width: 100%;
-  background: white;
-  transform: skewY(-3deg);
-  position: absolute;
-  bottom: -50px;
-  right: 0;
+#easterEggContainer {
+  display: none;
 }
 
 .headerTop > div > div {
   display: flex;
   width: 18vw;
+  min-width: 200px;
+  position: relative;
+  top: -5px;
+}
+@media screen and (max-width: 1040px) {
+  .headerTop > div > div {
+    position: absolute;
+    top: 60px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 300px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .headerTop > div > div {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .headerTop > div > div {
+    display: none;
+  }
 }
 .headerTop > div > div input[type=text] {
   width: 100%;
@@ -180,13 +249,7 @@ nav ul:nth-child(2) li::after, nav ul:nth-child(2) li::before {
   padding: 5px;
   height: 30px;
   border-radius: 5px 0 0 5px;
-  outline: none;
   color: black;
-}
-@media screen and (max-width: 1600px) {
-  .headerTop > div > div input[type=text] {
-    width: 80%;
-  }
 }
 .headerTop > div > div button[type=submit] {
   width: 40px;
@@ -210,52 +273,61 @@ footer .topFooter {
   align-items: flex-start;
   font-family: "Roboto", sans-serif;
   color: white;
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1450px) {
+  footer .topFooter div {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  footer .topFooter {
+    width: 70%;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  footer .topFooter {
+    flex-wrap: wrap;
+  }
 }
 footer .topFooter h3 {
   color: #C99D46;
   text-transform: uppercase;
   margin-bottom: 7px;
+  font-size: 0.9rem;
 }
 footer .topFooter h4 {
   color: #C99D46;
+  font-size: 0.8rem;
 }
-footer .topFooter a:hover {
-  color: #C99D46;
+footer .topFooter p {
+  font-size: 0.8rem;
 }
-footer .map {
-  background: white;
-  height: 550px;
-  position: relative;
-  overflow: hidden;
-}
-footer .map p {
-  font-family: "Roboto", sans-serif;
-  margin-bottom: 10px;
-}
-footer .map h3 {
-  padding: 15px 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
+footer .topFooter ul li a {
+  font-size: 0.8rem;
 }
 footer .copyright {
   text-align: center;
   color: white;
-  margin: 50px auto 10px;
-}
-
-.barreFooter {
-  height: 100px;
-  width: 100%;
-  background: #182C39;
-  transform: skewY(-3deg);
-  position: absolute;
-  top: -50px;
+  margin: 50px auto 0;
 }
 
 .logo {
   position: absolute;
   bottom: 10px;
   right: 10px;
+}
+@media screen and (max-width: 1450px) {
+  .logo {
+    bottom: 50px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .logo img {
+    width: 100px;
+  }
 }
 
 .gotop {
@@ -267,6 +339,27 @@ footer .copyright {
 .gotop i {
   font-size: 3rem;
   color: white;
+}
+
+@media screen and (max-width: 1450px) {
+  .map {
+    display: none;
+  }
+}
+
+.mapResp {
+  display: none;
+}
+@media screen and (max-width: 1450px) {
+  .mapResp {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .mapResp iframe {
+    width: 70%;
+  }
 }
 
 main {
@@ -281,9 +374,22 @@ main {
   margin: 0 auto 150px;
   width: 1400px;
 }
+@media screen and (max-width: 1450px) {
+  .indexGrid {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+}
 .indexGrid aside {
   overflow: hidden;
   margin-top: 100px;
+}
+@media screen and (max-width: 1450px) {
+  .indexGrid aside {
+    margin: 0 auto;
+    width: 70%;
+  }
 }
 .indexGrid aside button {
   display: block;
@@ -326,6 +432,13 @@ main {
   font-size: 1.2rem;
   color: #201f1d;
   letter-spacing: 0;
+}
+@media screen and (max-width: 1450px) {
+  .indexGrid aside .actu h3 {
+    font-size: 1.7rem;
+  }
+}
+.indexGrid aside .actu h3:hover {
   text-decoration: underline;
 }
 .indexGrid aside .actu p {
@@ -343,6 +456,13 @@ main {
   width: 120px;
   height: 120px;
   flex-shrink: 0;
+  object-fit: cover;
+}
+@media screen and (max-width: 1450px) {
+  .indexGrid aside .actu .card .img {
+    width: 200px;
+    height: 200px;
+  }
 }
 .indexGrid aside .actu .card .un {
   background: scroll center/cover url("img/marche.jpg");
@@ -386,6 +506,11 @@ main {
   font-size: 4.5rem;
   text-align: center;
 }
+@media screen and (max-width: 1450px) {
+  .indexGrid section h1 {
+    font-size: 5vw;
+  }
+}
 .indexGrid section p {
   padding: 15px 0px;
   font-size: 1.2rem;
@@ -394,6 +519,11 @@ main {
   color: rgb(29, 32, 34);
   width: 80%;
   margin: 0 auto;
+}
+@media screen and (max-width: 1450px) {
+  .indexGrid section p {
+    font-size: 1rem;
+  }
 }
 .indexGrid section p::first-letter {
   font-weight: 900;
@@ -433,11 +563,74 @@ main {
   align-items: center;
   gap: 5px;
 }
+@media screen and (max-width: 750px) {
+  .indexGrid section .imgBox {
+    flex-direction: column;
+  }
+}
 .indexGrid section .imgBox img {
   height: 200px;
 }
+@media screen and (max-width: 750px) {
+  .indexGrid section .imgBox img {
+    width: 400px;
+  }
+}
 .indexGrid section .airbnb-embed-frame img {
   width: 100%;
+}
+
+.appart {
+  margin: 100px auto 50px;
+}
+.appart h1 {
+  font-size: 2.8rem;
+  margin: 30px auto;
+}
+.appart h2 {
+  font-size: 2rem;
+  margin: 20px auto;
+}
+.appart p {
+  font-size: 1.2rem;
+  text-indent: 20px;
+  width: 80%;
+  margin: 0 0 50px;
+}
+@media screen and (max-width: 1350px) {
+  .appart p {
+    width: 100%;
+  }
+}
+.appart p::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.appart > p {
+  margin: 30px 0 50px;
+}
+.appart article {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1350px) {
+  .appart article {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.fancyBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.fancyBox img {
+  height: 350px;
+  width: 300px;
+  object-fit: cover;
 }
 
 .quartier {
@@ -456,6 +649,11 @@ main {
   width: 80%;
   margin: 0 0 50px;
 }
+@media screen and (max-width: 1350px) {
+  .quartier p {
+    width: 100%;
+  }
+}
 .quartier p::first-letter {
   font-size: 2rem;
   font-weight: bold;
@@ -468,13 +666,24 @@ main {
   grid-template-columns: 45% 45%;
   justify-content: space-between;
 }
+@media screen and (max-width: 1350px) {
+  .quartier article {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .slider {
   height: 450px;
-  width: 80%;
+  width: 1100px;
   margin: 0 auto;
   gap: 10px;
   margin-bottom: 150px;
+}
+@media screen and (max-width: 1150px) {
+  .slider {
+    display: none;
+  }
 }
 .slider .photo {
   height: 100%;
@@ -489,17 +698,245 @@ main {
   width: 100%;
 }
 .slider .img1 {
-  background: scroll no-repeat center/cover url(img/slider1.jpg);
+  background: scroll no-repeat bottom/cover url(img/slider1.jpg);
 }
 .slider .img2 {
-  background: scroll no-repeat center/cover url(img/slider2.jpg);
+  background: scroll no-repeat bottom/cover url(img/slider2.jpg);
 }
 .slider .img3 {
-  background: scroll no-repeat center/cover url(img/slider3.jpg);
+  background: scroll no-repeat bottom/cover url(img/slider3.jpg);
 }
 .slider .img4 {
-  background: scroll no-repeat center/cover url(img/slider4.jpg);
+  background: scroll no-repeat bottom/cover url(img/slider4.jpg);
 }
 .slider .img5 {
-  background: scroll no-repeat center/cover url(img/slider5.jpg);
+  background: scroll no-repeat bottom/cover url(img/slider5.jpg);
+}
+
+.resa {
+  background: scroll no-repeat center/cover url(img/plan-montmartre.jpg);
+  padding: 100px;
+}
+@media screen and (max-width: 750px) {
+  .resa {
+    padding: 100px 10px;
+  }
+}
+.resa form {
+  padding: 10px 10px;
+  background: #182C39;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  width: 50%;
+  max-width: 700px;
+  min-width: 500px;
+  margin: 0px auto;
+}
+@media screen and (max-width: 1350px) {
+  .resa form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 570px) {
+  .resa form {
+    min-width: 0;
+    width: 90%;
+  }
+}
+.resa form .civilite {
+  width: 50%;
+  justify-content: space-between;
+  margin: 10px 100px 10px 0px;
+}
+@media screen and (max-width: 1200px) {
+  .resa form .civilite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.resa form h1 {
+  color: #C99D46;
+  text-align: center;
+}
+.resa form p {
+  text-transform: uppercase;
+}
+.resa form h2 {
+  color: #C99D46;
+  margin-bottom: 10px;
+}
+.resa form .lettre {
+  height: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 570px) {
+  .resa form .lettre {
+    margin: 0;
+  }
+}
+.resa form .lettre .flexForm {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  width: 100%;
+}
+.resa form .lettre .flexForm input {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 5px 0 20px;
+}
+.resa form .lettre .form-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+@media screen and (max-width: 570px) {
+  .resa form .lettre .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.resa form input[type=submit] {
+  height: 45px;
+  width: 100%;
+  background-color: #aa8232;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+}
+.resa form input[type=submit]:hover {
+  background-color: #C99D46;
+  cursor: pointer;
+}
+
+.actualite {
+  margin: 100px 0;
+}
+.actualite h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.actualite h2 {
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.actualite h2 span {
+  font-weight: normal;
+  font-size: small;
+}
+.actualite article {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.actualite article div:last-child {
+  width: 80%;
+}
+.actualite article .img {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 666px) {
+  .actualite article .img {
+    display: none;
+  }
+}
+.actualite article .actu1 {
+  background: scroll no-repeat center/cover url(img/appartExt.jpg);
+}
+.actualite article .actu2 {
+  background: scroll no-repeat center/cover url(img/marche.jpg);
+}
+.actualite article .actu3 {
+  background: scroll no-repeat center/cover url(img/homeBackground.jpg);
+}
+.actualite article .actu4 {
+  background: scroll no-repeat center/cover url(img/rue.jpg);
+}
+
+.burgerPos {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.menuBurger {
+  display: none;
+  height: 30px;
+  width: 50px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.menuBurger .bar {
+  width: 100%;
+  height: 5px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+.menuBurger .bar1 {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+.menuBurger .bar2 {
+  display: none;
+}
+.menuBurger .bar3 {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+@media screen and (max-width: 800px) {
+  .menuBurger {
+    display: flex;
+  }
+}
+
+.menuBurgertoggle {
+  flex-direction: row;
+}
+
+.navDeroulant {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  background: rgba(0, 0, 0, 0.74);
+  height: 155px;
+  text-align: center;
+}
+.navDeroulant ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.navDeroulant li a {
+  text-transform: uppercase;
+}
+.navDeroulant li a:hover {
+  color: #C99D46;
+}
+
+.navBlock {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

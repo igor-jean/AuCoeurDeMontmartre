@@ -2,13 +2,13 @@
 <main>
     <div class="indexGrid">
         <aside>
-            <h2 class="titre">Actualités</h2>
+            <h2 class="titre"><a href="actualite.php">Actualités</a> </h2>
             <div class="actu">
                 <div class="card">
                     <div class="flex">
                         <div class="img un"></div>
                         <div>
-                            <a href=""><h3 class="titre">
+                            <a href="actualite.php"><h3 class="titre">
                             Montmartre s'anime avec son Marché aux Puces Vintage</h3></a>
                             
                             <span>le 19/06/23 à 8h45 - rédigé par A.Dubois</span>
@@ -17,38 +17,38 @@
                         <p>
                             Les rues animées de Montmartre seront le théâtre d'une activité plus modeste mais tout aussi charmante avec l'arrivée du Marché aux Puces Vintage . . .
                         </p>
-                        <a href="#"><button>En savoir plus     <i class="fa-solid fa-chevron-right fa-2xl"></i></button> </a>
+                        <a href="#"><button><a href="actualite.php">En savoir plus</a><i class="fa-solid fa-chevron-right fa-2xl"></i></button> </a>
                 </div>
                 <div class="separation"></div>
                 <div class="card">
                     <div class="flex">
                         <div class="img deux"></div>
                         <div>
-                            <a href=""><h3 class="titre">2499€ / mois pour vivre en plein coeur de Montmartre</h3></a>
+                            <a href="actualite.php"><h3 class="titre">2499€ / mois pour vivre en plein coeur de Montmartre</h3></a>
                             <span>le 23/11/23 à 15h30 - par A.Dubois</span>
                         </div>
                     </div>
                         <p>
                             Situé au cœur de Montmartre, cet appartement est entouré par l'effervescence artistique et culturelle du quartier. Les rues animées, les cafés . . .
                         </p>
-                        <a href="presentationAppartement.php"><button>Voir le logement <i class="fa-solid fa-chevron-right fa-2xl"></i></button></a>
+                        <a href="appartement.php"><button><a href="actualite.php">Voir le logement</a><i class="fa-solid fa-chevron-right fa-2xl"></i></button></a>
                 </div>
                 <div class="separation"></div>
                 <div class="card">
                     <div class="flex">
                         <div class="img trois"></div>
                         <div>
-                            <a href=""><h3 class="titre">Montmartre Réinventé : Un Café Artistique Éphémère Enflamme le Quartier</h3></a>
+                            <a href="actualite.php"><h3 class="titre">Montmartre Réinventé : Un Café Artistique Éphémère Enflamme le Quartier</h3></a>
                             <span>le 25/11/23 à 15h30 - par E.Bourdon</span>
                         </div>
                     </div>
                         <p>
                             Une nouvelle vague artistique déferle sur les rues pavées de Montmartre, apportant avec elle une énergie créative contagieuse. Les habitants du quartier et les visiteurs curieux . . .
                         </p>
-                        <a href="presentationAppartement.php"><button>Voir le logement <i class="fa-solid fa-chevron-right fa-2xl"></i></button></a>
+                        <a href="presentationAppartement.php"><button><a href="actualite.php">Voir le logement</a> <i class="fa-solid fa-chevron-right fa-2xl"></i></button></a>
                 </div>
                 <div class="separation"></div>
-                <a class="pub" href=""><img src="img/pub.png" alt=""></a>
+                <a class="pub" href="https://www.airbnb.fr/"><img src="img/pub.png" alt=""></a>
             </div>
         </aside>
         <section>

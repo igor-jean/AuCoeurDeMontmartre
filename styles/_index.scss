@@ -5,9 +5,20 @@
     margin: 0 auto 150px;
     width: 1400px;
 
+    @media screen and (max-width: 1450px) {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
     aside {
         overflow: hidden;
         margin-top: 100px;
+
+        @media screen and (max-width: 1450px) {
+            margin: 0 auto;
+            width: 70%;
+        }
 
         button {
             display: block;
@@ -55,7 +66,15 @@
                 font-size: 1.2rem;
                 color: #201f1d;
                 letter-spacing: 0;
-                text-decoration: underline;
+
+                @media screen and (max-width: 1450px) {
+                    font-size: 1.7rem;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+
+                }
             }
 
             p {
@@ -75,6 +94,12 @@
                     width: 120px;
                     height: 120px;
                     flex-shrink: 0;
+                    object-fit: cover;
+
+                    @media screen and (max-width: 1450px) {
+                        width: 200px;
+                        height: 200px;
+                    }
                 }
 
                 .un {
@@ -139,6 +164,10 @@
         h1 {
             font-size: 4.5rem;
             text-align: center;
+
+            @media screen and (max-width: 1450px) {
+                font-size: 5vw;
+            }
         }
 
         p {
@@ -149,6 +178,10 @@
             color: rgb(29 32 34);
             width: 80%;
             margin: 0 auto;
+
+            @media screen and (max-width: 1450px) {
+                font-size: 1rem;
+            }
 
             &::first-letter {
                 font-weight: 900;
@@ -196,8 +229,16 @@
             @include center;
             gap: 5px;
 
+            @media screen and (max-width: 750px) {
+                flex-direction: column;
+            }
+
             img {
                 height: 200px;
+
+                @media screen and (max-width: 750px) {
+                    width: 400px;
+                }
             }
 
         }

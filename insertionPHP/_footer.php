@@ -1,7 +1,10 @@
 <footer>
-    <div class="barreFooter"></div>
-    <div class="topFooter flex container"> 
-        <div>
+    <div class="mapResp">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24956.231722628017!2d2.314458165135177!3d48.89251168026842!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66faec5ad1dad%3A0xe60c4557ff702da9!2s155%20Rue%20Cardinet%2C%2075017%20Paris!5e0!3m2!1sfr!2sfr!4v1700164198907!5m2!1sfr!2sfr" width="750" height="250" style="border: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    <div class="topFooter flex"> 
+        <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24956.231722628017!2d2.314458165135177!3d48.89251168026842!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66faec5ad1dad%3A0xe60c4557ff702da9!2s155%20Rue%20Cardinet%2C%2075017%20Paris!5e0!3m2!1sfr!2sfr!4v1700164198907!5m2!1sfr!2sfr" width="500" height="250" style="border: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div>
@@ -12,13 +15,9 @@
         <div>
             <h3>Contact</h3>
             <h4>téléphone :</h4>
-            <span>05 78 54 12 65</span>
+            <p>05 78 54 12 65</p>
             <h4>e-mail :</h4>
-            <span>contact@contact.fr</span>
-            <h4>Réseaux</h4>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" class="google"><i class="fa-brands fa-instagram"></i></a>
+            <p>contact@contact.fr</p>
         </div>
         <div>
             <h3>à propos</h3>

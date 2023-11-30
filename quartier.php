@@ -63,7 +63,7 @@
         currentIndex = (currentIndex + 1) % images.length;
     }
 
-    setInterval(toggleShrink, 3000); // Appelle la fonction toutes les 5 secondes
+    setInterval(toggleShrink, 2000);
 </script>
 
 

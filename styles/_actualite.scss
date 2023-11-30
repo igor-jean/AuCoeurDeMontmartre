@@ -1,0 +1,57 @@
+.actualite {
+    margin: 100px 0;
+
+    h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        line-height: 20px;
+        margin-bottom: 10px;
+
+        span {
+            font-weight: normal;
+            font-size: small;
+        }
+    }
+
+    article {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        div:last-child {
+            width: 80%;
+
+        }
+
+        .img {
+            width: 200px;
+            height: 200px;
+            flex-shrink: 0;
+
+            @media screen and (max-width: 666px) {
+                display: none;
+            }
+        }
+
+        .actu1 {
+            background: scroll no-repeat center/cover url(img/appartExt.jpg);
+        }
+
+        .actu2 {
+            background: scroll no-repeat center/cover url(img/marche.jpg)
+        }
+
+        .actu3 {
+            background: scroll no-repeat center/cover url(img/homeBackground.jpg)
+        }
+
+        .actu4 {
+            background: scroll no-repeat center/cover url(img/rue.jpg)
+        }
+
+    }
+}

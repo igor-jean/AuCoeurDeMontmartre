@@ -1,7 +1,25 @@
 .headerTop>div>div {
     display: flex;
     width: 18vw;
+    min-width: 200px;
+    position: relative;
+    top: -5px;
 
+    @media screen and (max-width: 1040px) {
+        position: absolute;
+        top: 60px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 300px;
+    }
+
+    @media screen and (max-width: 570px) {
+        width: 200px;
+    }
+
+    @media screen and (max-width: 450px) {
+        display: none;
+    }
 
     input[type=text] {
         width: 100%;
@@ -10,12 +28,8 @@
         padding: 5px;
         height: 30px;
         border-radius: 5px 0 0 5px;
-        outline: none;
         color: black;
 
-        @media screen and (max-width: 1600px) {
-            width: 80%;
-        }
     }
 
     button[type=submit] {

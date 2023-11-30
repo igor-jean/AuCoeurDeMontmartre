@@ -14,40 +14,51 @@ $error = false;
 
 if(empty($genre)){
     $error = true;
-    echo "Veuillez remplir le genre.";
-}elseif(empty($nom)){
+    echo "Veuillez remplir le genre.<br>";
+}
+if(empty($nom)){
     $error = true;
-    echo "Veuillez remplir le nom.";
-}elseif(empty($prenom)){
+    echo "Veuillez remplir le nom.<br>";
+}
+if(empty($prenom)){
     $error = true;
-    echo "Veuillez remplir le prenom.";
-}elseif(empty($mail)){
+    echo "Veuillez remplir le prenom.<br>";
+}
+if(empty($mail)){
     $error = true;
-    echo "Veuillez remplir l'adresse mail.";
-}elseif(empty($tel)){
+    echo "Veuillez remplir l'adresse mail.<br>";
+}
+if(empty($tel)){
     $error = true;
-    echo "Veuillez remplir un numero de téléphone.";
-}elseif(empty($adresse)){
+    echo "Veuillez remplir un numero de téléphone.<br>";
+}
+if(empty($adresse)){
     $error = true;
-    echo "Veullez remplir une adresse.";
-}elseif(empty($cp)){
+    echo "Veullez remplir une adresse.<br>";
+}
+if(empty($cp)){
     $error = true;
-    echo "Veuillez remplir un code postale.";
-}elseif(empty($ville)){
+    echo "Veuillez remplir un code postale.<br>";
+}
+if(empty($ville)){
     $error = true;
-    echo "Veuillez remplir une ville.";
-}elseif(empty($dateDebut)){
+    echo "Veuillez remplir une ville.<br>";
+}
+if(empty($dateDebut)){
     $error = true;
-    echo "Veuillez remplir une date de début.";
-}elseif(empty($dateFin)){
+    echo "Veuillez remplir une date de début.<br>";
+}
+if(empty($dateFin)){
     $error = true;
-    echo "Veuillez remplir une date de fin.";
-}elseif(!$error)
+    echo "Veuillez remplir une date de fin.<br>";
+}
+
 ?>
 <main>
     <?php
+    if(!$error)
 {
-    echo "Félicitations ".$nom." ".$prenom." ! Votre inscription a bien été prise en compte. Vous allez recevoir un email de confirmation à l'adresse ".$adresse." . Vous avez résérvé pour la periode du ".$dateDebut." au ".$dateFin.".<br><a href='index.php'>Accueil</a>";
+    echo "Félicitations ".$genre." ".$nom." ".$prenom." ! Votre inscription a bien été prise en compte. Vous allez recevoir un email de confirmation à l'adresse ".$mail." . Vous avez résérvé pour la periode du ".$dateDebut." au ".$dateFin.".<br><a href='index.php'>Accueil</a>";
    
 }
 ?>

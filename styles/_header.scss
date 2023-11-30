@@ -2,18 +2,25 @@ header {
     background: scroll no-repeat center/cover url(img/homeBackground.jpg);
     height: 100vh;
     color: white;
-    position: relative;
-    overflow: hidden;
+
 
     .headerTop {
         height: 150px;
         background: rgba(0, 0, 0, 0.74);
-        padding-top: 10px;
+        padding: 15px;
+
+        @media screen and (max-width: 1040px) {
+            height: 100px;
+        }
 
         >div {
             height: 100%;
             width: 90%;
             align-items: flex-start;
+
+            @media screen and (max-width: 1040px) {
+                justify-content: center;
+            }
         }
 
         #logo {
@@ -23,6 +30,10 @@ header {
 
             img {
                 height: 150px;
+
+                @media screen and (max-width: 1040px) {
+                    height: 100px;
+                }
             }
         }
     }
@@ -32,10 +43,16 @@ header {
 nav {
     height: 20px;
 
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
+
     ul:first-child {
         @include center;
         align-items: normal;
         gap: 20px;
+
+
 
         & li {
             text-transform: uppercase;
@@ -77,7 +94,20 @@ nav {
 
         & li:nth-child(2):hover>ul {
             display: block;
+        }
 
+        & li:nth-child(2) {
+            @media screen and (max-width: 1040px) {
+                display: none;
+            }
+        }
+    }
+
+    .navResp {
+        display: none;
+
+        @media screen and (max-width: 1040px) {
+            display: block;
         }
     }
 
@@ -102,37 +132,51 @@ nav {
 .bold {
     font-weight: bold;
     color: $colorSecondaire;
+    position: relative;
+
+
+}
+
+.under {
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        display: block;
+        height: 2px;
+        transition: all 0.3s ease;
+        background-color: $colorSecondaire;
+    }
+
+    &:after {
+        bottom: -5px;
+        left: -5px;
+    }
+
+    &:before {
+        top: -7px;
+        right: -5px;
+    }
 }
 
 // LIEN RESEAUX
 .headerTop>div>div:last-child {
     display: flex;
+    justify-content: flex-end;
     gap: 25px;
 
     .fa-brands {
         font-size: 2rem;
     }
 
-    .fa-square-x-twitter:hover {
-        color: #00aced;
-    }
+    @media screen and (max-width: 1450px) {
+        display: none;
 
-    .fa-square-facebook:hover {
-        color: #0866FF;
     }
-
-    .fa-instagram:hover {
-        color: red
-    }
-
 }
 
-.bottomHome {
-    height: 100px;
-    width: 100%;
-    background: white;
-    transform: skewY(-3deg);
-    position: absolute;
-    bottom: -50px;
-    right: 0;
+#easterEggContainer {
+    display: none;
 }
