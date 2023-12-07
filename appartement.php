@@ -34,28 +34,28 @@
             </article>
         </section>
         <div class="fancyBox">
-            <a href="img/appartExt.jpg" data-fancybox="gallery" data-caption="Caption #1">
+            <a href="img/appartExt.jpg" data-fancybox="gallery" data-caption="appartement">
                 <img src="img/appartExt.jpg" />
             </a>
-            <a href="img/salon.jpg" data-fancybox="gallery" data-caption="Caption #2">
+            <a href="img/salon.jpg" data-fancybox="gallery" data-caption="salon">
                 <img src="img/salon.jpg" />
             </a>
-            <a href="img/ruelle.jpg" data-fancybox="gallery" data-caption="Caption #3">
+            <a href="img/ruelle.jpg" data-fancybox="gallery" data-caption="ruelle">
                 <img src="img/ruelle.jpg" />
             </a>
-            <a href="img/rue.jpg" data-fancybox="gallery" data-caption="Caption #4">
+            <a href="img/rue.jpg" data-fancybox="gallery" data-caption="rue">
                 <img src="img/rue.jpg" />
             </a>
-            <a href="img/cuisine.jpg" data-fancybox="gallery" data-caption="Caption #5">
+            <a href="img/cuisine.jpg" data-fancybox="gallery" data-caption="cuisine">
                 <img src="img/cuisine.jpg" />
             </a>
-            <a href="img/bedroom.jpg" data-fancybox="gallery" data-caption="Caption #6">
+            <a href="img/bedroom.jpg" data-fancybox="gallery" data-caption="chambre">
                 <img src="img/bedroom.jpg" />
             </a>
-            <a href="img/bedroom2.jpg" data-fancybox="gallery" data-caption="Caption #7">
+            <a href="img/bedroom2.jpg" data-fancybox="gallery" data-caption="chambre">
                 <img src="img/bedroom2.jpg" />
             </a>
-            <a href="img/bathroom.jpg" data-fancybox="gallery" data-caption="Caption #8">
+            <a href="img/bathroom.jpg" data-fancybox="gallery" data-caption="Salle de bain">
                 <img src="img/bathroom.jpg" />
             </a>
         </div>

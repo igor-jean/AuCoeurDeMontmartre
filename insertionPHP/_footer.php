@@ -31,7 +31,7 @@
         <div>
             <h3>navigation</h3>
             <ul>
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.php">Accueil</a></li>
             <li><a href="quartier.php">Présentation Quartier</a></li>
             <li><a href="appartement.php">Présentaton Appartement</a></li>
             <li><a href="actualite.php">Actualités</a></li>

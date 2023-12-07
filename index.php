@@ -77,16 +77,16 @@
                         Le salon, d'une impressionnante superficie de 40m², est l'épicentre de la convivialité. Deux grandes fenêtres inondent l'espace de lumière naturelle et offrent une vue captivante sur le magnifique paysage de Montmartre. Imaginez-vous vous détendre dans cet espace, plongé dans l'atmosphère unique du quartier. 
                     </p>
                     <div class="imgBox">
-                        <img src="img/cuisine.jpg" alt="Photo">
-                        <img src="img/bathroom.jpg" alt="Photo">
+                        <a href="img/cuisine.jpg"><img src="img/cuisine.jpg" alt="Photo"></a>
+                        <a href="img/bathroom.jpg"><img src="img/bathroom.jpg" alt="Photo"></a>
                     </div>
                     <h3>Emplacement Idéal</h3>
                     <p>
                         Situé au cœur de Montmartre, cet appartement est entouré par l'effervescence artistique et culturelle du quartier. Les rues animées, les cafés pittoresques et les galeries d'art renommées sont à votre porte, vous invitant à explorer chaque coin de ce quartier emblématique. 
                     </p>
                     <div class="imgBox">
-                        <img src="img/bedroom.jpg" alt="Photo">
-                        <img src="img/bedroom2.jpg" alt="Photo">
+                        <a href="img/bedroom.jpg"><img src="img/bedroom.jpg" alt="Photo"></a>
+                        <a href="img/bedroom2.jpg"><img src="img/bedroom2.jpg" alt="Photo"></a>
                     </div>
                 </div>
             </article>

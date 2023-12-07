@@ -5,6 +5,10 @@
         font-size: 3rem;
         text-transform: uppercase;
         margin-bottom: 50px;
+
+        @media screen and (max-width: 666px) {
+            text-align: center;
+        }
     }
 
     h2 {
@@ -21,6 +25,10 @@
         display: flex;
         justify-content: space-between;
         gap: 20px;
+
+        @media screen and (max-width: 666px) {
+            justify-content: center;
+        }
 
         div:last-child {
             width: 80%;

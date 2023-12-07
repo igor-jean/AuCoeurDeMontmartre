@@ -31,6 +31,11 @@ html {
     max-width: 700px;
   }
 }
+@media screen and (max-width: 666px) {
+  .container {
+    width: 90%;
+  }
+}
 
 .flex {
   display: flex;
@@ -826,6 +831,11 @@ main {
   text-transform: uppercase;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 666px) {
+  .actualite h1 {
+    text-align: center;
+  }
+}
 .actualite h2 {
   line-height: 20px;
   margin-bottom: 10px;
@@ -838,6 +848,11 @@ main {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+}
+@media screen and (max-width: 666px) {
+  .actualite article {
+    justify-content: center;
+  }
 }
 .actualite article div:last-child {
   width: 80%;
