@@ -1,11 +1,6 @@
 .quartier {
     margin: 100px 0;
 
-    h1 {
-        font-size: 2.5rem;
-        margin: 30px 0;
-    }
-
     h2 {
         margin: 20px auto;
     }
@@ -13,7 +8,6 @@
     p {
         font-size: 1.2rem;
         text-indent: 20px;
-        width: 80%;
         margin: 0 0 50px;
 
         @media screen and (max-width: 1350px) {
@@ -58,7 +52,6 @@
         height: 100%;
         width: 100px;
         background: grey;
-        border-radius: 70px;
         flex-shrink: 0;
         transition: 1s;
     }

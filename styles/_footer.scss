@@ -4,11 +4,10 @@ footer {
     padding-top: 70px;
 
     .topFooter {
-        padding-top: 30px;
+        height: 250px;
         align-items: flex-start;
         font-family: 'Roboto', sans-serif;
         color: white;
-        width: 80%;
         margin: 0 auto;
 
         div {
@@ -47,6 +46,21 @@ footer {
         }
     }
 
+    .infoFooter {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        .flex {
+            align-items: flex-start;
+        }
+
+        .widthInfo {
+            width: 150px;
+        }
+    }
 
     .copyright {
         text-align: center;
@@ -77,15 +91,16 @@ footer {
     }
 }
 
-.gotop {
-    position: absolute;
+#gotop {
+    display: none;
+    position: fixed;
     right: 0;
-    bottom: 50%;
+    bottom: 15%;
     padding: 60px;
 
     i {
         font-size: 3rem;
-        color: white;
+        color: $colorSecondaire;
     }
 }
 

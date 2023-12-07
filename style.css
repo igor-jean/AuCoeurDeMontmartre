@@ -66,6 +66,16 @@ a {
   color: inherit;
 }
 
+h1 {
+  font-size: 4.5rem;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1450px) {
+  h1 {
+    font-size: 5vw;
+  }
+}
+
 header {
   background: scroll no-repeat center/cover url(img/homeBackground.jpg);
   height: 100vh;
@@ -74,7 +84,12 @@ header {
 header .headerTop {
   height: 150px;
   background: rgba(0, 0, 0, 0.74);
+  backdrop-filter: blur(4px);
   padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 @media screen and (max-width: 1040px) {
   header .headerTop {
@@ -92,12 +107,10 @@ header .headerTop > div {
   }
 }
 header .headerTop #logo {
-  position: absolute;
-  top: 8px;
-  left: 20px;
+  height: 100%;
 }
 header .headerTop #logo img {
-  height: 150px;
+  height: 100%;
 }
 @media screen and (max-width: 1040px) {
   header .headerTop #logo img {
@@ -151,7 +164,9 @@ nav ul:first-child li:hover::before {
   width: 100%;
 }
 nav ul:first-child li:nth-child(2):hover > ul {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 @media screen and (max-width: 1040px) {
   nav ul:first-child li:nth-child(2) {
@@ -168,6 +183,7 @@ nav .navResp {
 }
 nav ul:nth-child(2) {
   display: none;
+  height: 70px;
 }
 nav ul:nth-child(2) li a {
   color: white;
@@ -181,7 +197,7 @@ nav ul:nth-child(2) li::after, nav ul:nth-child(2) li::before {
 
 .bold {
   font-weight: bold;
-  color: #C99D46;
+  color: #C99D46 !important;
   position: relative;
 }
 
@@ -274,11 +290,10 @@ footer {
   padding-top: 70px;
 }
 footer .topFooter {
-  padding-top: 30px;
+  height: 250px;
   align-items: flex-start;
   font-family: "Roboto", sans-serif;
   color: white;
-  width: 80%;
   margin: 0 auto;
 }
 @media screen and (max-width: 1450px) {
@@ -313,6 +328,19 @@ footer .topFooter p {
 footer .topFooter ul li a {
   font-size: 0.8rem;
 }
+footer .infoFooter {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+footer .infoFooter .flex {
+  align-items: flex-start;
+}
+footer .infoFooter .widthInfo {
+  width: 150px;
+}
 footer .copyright {
   text-align: center;
   color: white;
@@ -335,15 +363,16 @@ footer .copyright {
   }
 }
 
-.gotop {
-  position: absolute;
+#gotop {
+  display: none;
+  position: fixed;
   right: 0;
-  bottom: 50%;
+  bottom: 15%;
   padding: 60px;
 }
-.gotop i {
+#gotop i {
   font-size: 3rem;
-  color: white;
+  color: #C99D46;
 }
 
 @media screen and (max-width: 1450px) {
@@ -375,9 +404,8 @@ main {
 .indexGrid {
   display: grid;
   grid-template-columns: 30% 70%;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto 150px;
-  width: 1400px;
 }
 @media screen and (max-width: 1450px) {
   .indexGrid {
@@ -505,16 +533,11 @@ main {
   margin: 0 auto;
 }
 .indexGrid section {
-  padding: 50px;
+  padding: 50px 0px;
+  padding-left: 50px;
 }
 .indexGrid section h1 {
-  font-size: 4.5rem;
   text-align: center;
-}
-@media screen and (max-width: 1450px) {
-  .indexGrid section h1 {
-    font-size: 5vw;
-  }
 }
 .indexGrid section p {
   padding: 15px 0px;
@@ -522,7 +545,6 @@ main {
   text-indent: 15px;
   line-height: 30px;
   color: rgb(29, 32, 34);
-  width: 80%;
   margin: 0 auto;
 }
 @media screen and (max-width: 1450px) {
@@ -588,10 +610,6 @@ main {
 .appart {
   margin: 100px auto 50px;
 }
-.appart h1 {
-  font-size: 2.8rem;
-  margin: 30px auto;
-}
 .appart h2 {
   font-size: 2rem;
   margin: 20px auto;
@@ -599,7 +617,6 @@ main {
 .appart p {
   font-size: 1.2rem;
   text-indent: 20px;
-  width: 80%;
   margin: 0 0 50px;
 }
 @media screen and (max-width: 1350px) {
@@ -630,7 +647,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 50px;
+  margin: 0 auto;
+  justify-content: center;
 }
 .fancyBox img {
   height: 350px;
@@ -641,17 +659,12 @@ main {
 .quartier {
   margin: 100px 0;
 }
-.quartier h1 {
-  font-size: 2.5rem;
-  margin: 30px 0;
-}
 .quartier h2 {
   margin: 20px auto;
 }
 .quartier p {
   font-size: 1.2rem;
   text-indent: 20px;
-  width: 80%;
   margin: 0 0 50px;
 }
 @media screen and (max-width: 1350px) {
@@ -694,7 +707,6 @@ main {
   height: 100%;
   width: 100px;
   background: grey;
-  border-radius: 70px;
   flex-shrink: 0;
   transition: 1s;
 }
@@ -825,16 +837,17 @@ main {
 
 .actualite {
   margin: 100px 0;
+  color: #182C39;
 }
-.actualite h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-bottom: 50px;
+.actualite p {
+  padding: 15px 0px;
+  font-size: 1.2rem;
+  text-indent: 15px;
+  line-height: 30px;
 }
-@media screen and (max-width: 666px) {
-  .actualite h1 {
-    text-align: center;
-  }
+.actualite p::first-letter {
+  font-weight: 900;
+  font-size: 2rem;
 }
 .actualite h2 {
   line-height: 20px;

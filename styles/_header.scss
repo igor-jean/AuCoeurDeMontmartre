@@ -7,7 +7,12 @@ header {
     .headerTop {
         height: 150px;
         background: rgba(0, 0, 0, 0.74);
+        backdrop-filter: blur(4px);
         padding: 15px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
 
         @media screen and (max-width: 1040px) {
             height: 100px;
@@ -24,12 +29,10 @@ header {
         }
 
         #logo {
-            position: absolute;
-            top: 8px;
-            left: 20px;
+            height: 100%;
 
             img {
-                height: 150px;
+                height: 100%;
 
                 @media screen and (max-width: 1040px) {
                     height: 100px;
@@ -93,7 +96,9 @@ nav {
         }
 
         & li:nth-child(2):hover>ul {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
         }
 
         & li:nth-child(2) {
@@ -113,6 +118,7 @@ nav {
 
     ul:nth-child(2) {
         display: none;
+        height: 70px;
 
         & li a {
             color: white;
@@ -131,7 +137,7 @@ nav {
 
 .bold {
     font-weight: bold;
-    color: $colorSecondaire;
+    color: $colorSecondaire !important;
     position: relative;
 
 

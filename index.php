@@ -1,6 +1,6 @@
 <?php require_once "insertionPhp/_header.php";?>
 <main>
-    <div class="indexGrid">
+    <div class="indexGrid container">
         <aside>
             <h2 class="titre"><a href="actualite.php">Actualités</a> </h2>
             <div class="actu">

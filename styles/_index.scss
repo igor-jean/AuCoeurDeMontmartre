@@ -1,9 +1,8 @@
 .indexGrid {
     display: grid;
     grid-template-columns: 30% 70%;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 auto 150px;
-    width: 1400px;
 
     @media screen and (max-width: 1450px) {
         display: flex;
@@ -159,15 +158,11 @@
     }
 
     section {
-        padding: 50px;
+        padding: 50px 0px;
+        padding-left: 50px;
 
         h1 {
-            font-size: 4.5rem;
             text-align: center;
-
-            @media screen and (max-width: 1450px) {
-                font-size: 5vw;
-            }
         }
 
         p {
@@ -176,7 +171,6 @@
             text-indent: 15px;
             line-height: 30px;
             color: rgb(29 32 34);
-            width: 80%;
             margin: 0 auto;
 
             @media screen and (max-width: 1450px) {
