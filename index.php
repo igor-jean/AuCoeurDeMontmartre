@@ -48,7 +48,9 @@
                         <a href="presentationAppartement.php"><button><a href="actualite.php">Voir le logement</a> <i class="fa-solid fa-chevron-right fa-2xl"></i></button></a>
                 </div>
                 <div class="separation"></div>
-                <a class="pub" href="https://www.airbnb.fr/"><img src="img/pub.png" alt=""></a>
+                <a class="pub" href="https://www.airbnb.fr/"><img src="img/pub.png" alt="pub AirBnb"></a>
+                <a class="pubResp" href="https://www.airbnb.fr/"><img src="img/banAirbnb.png" alt="pub AirBnB"></a>
+                
             </div>
         </aside>
         <section>

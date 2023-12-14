@@ -21,16 +21,6 @@ html {
   max-width: 1300px;
   margin: 0 auto;
 }
-@media screen and (max-width: 1600px) {
-  .container {
-    max-width: 1100px;
-  }
-}
-@media screen and (max-width: 1450px) {
-  .container {
-    max-width: 700px;
-  }
-}
 @media screen and (max-width: 666px) {
   .container {
     width: 90%;
@@ -70,9 +60,19 @@ h1 {
   font-size: 4.5rem;
   margin-bottom: 50px;
 }
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1200px) {
   h1 {
-    font-size: 5vw;
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 555px) {
+  h1 {
+    font-size: 2rem;
   }
 }
 
@@ -80,6 +80,8 @@ header {
   background: scroll no-repeat center/cover url(img/homeBackground.jpg);
   height: 100vh;
   color: white;
+  position: relative;
+  z-index: 100;
 }
 header .headerTop {
   height: 150px;
@@ -89,33 +91,24 @@ header .headerTop {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
+}
+header .headerTop .flex {
+  justify-content: space-between;
 }
 @media screen and (max-width: 1040px) {
   header .headerTop {
     height: 100px;
   }
 }
-header .headerTop > div {
+header .headerTop > div:not(.navDeroulant) {
   height: 100%;
-  width: 90%;
   align-items: flex-start;
-}
-@media screen and (max-width: 1040px) {
-  header .headerTop > div {
-    justify-content: center;
-  }
 }
 header .headerTop #logo {
   height: 100%;
 }
 header .headerTop #logo img {
   height: 100%;
-}
-@media screen and (max-width: 1040px) {
-  header .headerTop #logo img {
-    height: 100px;
-  }
 }
 
 nav {
@@ -168,7 +161,7 @@ nav ul:first-child li:nth-child(2):hover > ul {
   flex-direction: column;
   justify-content: space-around;
 }
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1400px) {
   nav ul:first-child li:nth-child(2) {
     display: none;
   }
@@ -176,8 +169,14 @@ nav ul:first-child li:nth-child(2):hover > ul {
 nav .navResp {
   display: none;
 }
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1400px) {
   nav .navResp {
+    display: block;
+  }
+}
+@media screen and (max-width: 800px) {
+  nav .navResp .searchBar {
+    width: 100%;
     display: block;
   }
 }
@@ -219,17 +218,35 @@ nav ul:nth-child(2) li::after, nav ul:nth-child(2) li::before {
   right: -5px;
 }
 
-.headerTop > div > div:last-child {
+.reseaux {
   display: flex;
   justify-content: flex-end;
-  gap: 25px;
+  gap: 15px;
 }
-.headerTop > div > div:last-child .fa-brands {
+@media screen and (max-width: 360px) {
+  .reseaux {
+    gap: 5px;
+  }
+}
+.reseaux .fa-brands {
+  display: block;
   font-size: 2rem;
 }
-@media screen and (max-width: 1450px) {
-  .headerTop > div > div:last-child {
-    display: none;
+@media screen and (max-width: 360px) {
+  .reseaux .fa-brands {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .reseaux {
+    position: absolute;
+    top: 60px;
+    left: 68%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .reseaux {
+    position: unset;
   }
 }
 
@@ -237,15 +254,13 @@ nav ul:nth-child(2) li::after, nav ul:nth-child(2) li::before {
   display: none;
 }
 
-.headerTop > div > div {
+.searchBar {
   display: flex;
-  width: 18vw;
-  min-width: 200px;
   position: relative;
   top: -5px;
 }
-@media screen and (max-width: 1040px) {
-  .headerTop > div > div {
+@media screen and (max-width: 1400px) {
+  .searchBar {
     position: absolute;
     top: 60px;
     right: 50%;
@@ -253,17 +268,17 @@ nav ul:nth-child(2) li::after, nav ul:nth-child(2) li::before {
     width: 300px;
   }
 }
-@media screen and (max-width: 570px) {
-  .headerTop > div > div {
-    width: 200px;
+@media screen and (max-width: 960px) {
+  .searchBar {
+    width: 30%;
   }
 }
-@media screen and (max-width: 450px) {
-  .headerTop > div > div {
+@media screen and (max-width: 800px) {
+  .searchBar {
     display: none;
   }
 }
-.headerTop > div > div input[type=text] {
+.searchBar input[type=text] {
   width: 100%;
   border: 3px solid #C99D46;
   border-right: none;
@@ -272,7 +287,7 @@ nav ul:nth-child(2) li::after, nav ul:nth-child(2) li::before {
   border-radius: 5px 0 0 5px;
   color: black;
 }
-.headerTop > div > div button[type=submit] {
+.searchBar button[type=submit] {
   width: 40px;
   height: 30px;
   border: 1px solid #C99D46;
@@ -287,19 +302,18 @@ nav ul:nth-child(2) li::after, nav ul:nth-child(2) li::before {
 footer {
   position: relative;
   background: #182C39;
-  padding-top: 70px;
+  padding: 70px 0 10px;
+}
+@media screen and (max-width: 450px) {
+  footer {
+    padding-top: 1px;
+  }
 }
 footer .topFooter {
-  height: 250px;
   align-items: flex-start;
   font-family: "Roboto", sans-serif;
   color: white;
   margin: 0 auto;
-}
-@media screen and (max-width: 1450px) {
-  footer .topFooter div {
-    width: 180px;
-  }
 }
 @media screen and (max-width: 1450px) {
   footer .topFooter {
@@ -312,15 +326,31 @@ footer .topFooter {
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 450px) {
+  footer .topFooter {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
 footer .topFooter h3 {
   color: #C99D46;
   text-transform: uppercase;
   margin-bottom: 7px;
   font-size: 0.9rem;
 }
+@media screen and (max-width: 450px) {
+  footer .topFooter h3 {
+    font-size: 1.2rem;
+  }
+}
 footer .topFooter h4 {
   color: #C99D46;
   font-size: 0.8rem;
+}
+@media screen and (max-width: 450px) {
+  footer .topFooter h4 {
+    font-size: 1rem;
+  }
 }
 footer .topFooter p {
   font-size: 0.8rem;
@@ -335,16 +365,55 @@ footer .infoFooter {
   justify-content: space-between;
   height: 100%;
 }
+@media screen and (max-width: 1450px) {
+  footer .infoFooter {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 780px) {
+  footer .infoFooter {
+    flex-direction: column;
+  }
+}
 footer .infoFooter .flex {
   align-items: flex-start;
+}
+@media screen and (max-width: 1450px) {
+  footer .infoFooter .flex {
+    width: 50%;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 780px) {
+  footer .infoFooter .flex {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  footer .infoFooter .flex {
+    flex-direction: column;
+  }
 }
 footer .infoFooter .widthInfo {
   width: 150px;
 }
+@media screen and (max-width: 450px) {
+  footer .infoFooter .widthInfo {
+    margin-bottom: 20px;
+  }
+}
 footer .copyright {
   text-align: center;
   color: white;
-  margin: 50px auto 0;
+  margin: 0px auto;
+  padding: 20px 10px 10px;
+}
+@media screen and (max-width: 450px) {
+  footer .copyright {
+    font-size: 0.8rem;
+  }
 }
 
 .logo {
@@ -357,9 +426,19 @@ footer .copyright {
     bottom: 50px;
   }
 }
+@media screen and (max-width: 850px) {
+  .logo {
+    bottom: 80px;
+  }
+}
 @media screen and (max-width: 1450px) {
   .logo img {
     width: 100px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .logo img {
+    width: 60px;
   }
 }
 
@@ -373,6 +452,11 @@ footer .copyright {
 #gotop i {
   font-size: 3rem;
   color: #C99D46;
+}
+@media screen and (max-width: 850px) {
+  #gotop {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 1450px) {
@@ -395,6 +479,11 @@ footer .copyright {
     width: 70%;
   }
 }
+@media screen and (max-width: 450px) {
+  .mapResp iframe {
+    width: 100%;
+  }
+}
 
 main {
   background: white;
@@ -411,7 +500,11 @@ main {
   .indexGrid {
     display: flex;
     flex-direction: column-reverse;
-    width: 100%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .indexGrid {
+    margin: 0 auto 50px;
   }
 }
 .indexGrid aside {
@@ -421,7 +514,6 @@ main {
 @media screen and (max-width: 1450px) {
   .indexGrid aside {
     margin: 0 auto;
-    width: 70%;
   }
 }
 .indexGrid aside button {
@@ -458,7 +550,6 @@ main {
 }
 .indexGrid aside .actu {
   padding: 20px 10px;
-  overflow: hidden;
 }
 .indexGrid aside .actu h3 {
   font-family: "Overpass", sans-serif;
@@ -469,6 +560,11 @@ main {
 @media screen and (max-width: 1450px) {
   .indexGrid aside .actu h3 {
     font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 666px) {
+  .indexGrid aside .actu h3 {
+    font-size: 1.3rem;
   }
 }
 .indexGrid aside .actu h3:hover {
@@ -495,6 +591,11 @@ main {
   .indexGrid aside .actu .card .img {
     width: 200px;
     height: 200px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .indexGrid aside .actu .card .img {
+    display: none;
   }
 }
 .indexGrid aside .actu .card .un {
@@ -527,6 +628,23 @@ main {
 .indexGrid aside .actu .pub a img {
   width: 100%;
 }
+@media screen and (max-width: 1450px) {
+  .indexGrid aside .actu .pub {
+    display: none;
+  }
+}
+.indexGrid aside .actu .pubResp {
+  display: none;
+}
+.indexGrid aside .actu .pubResp img {
+  width: 100%;
+}
+@media screen and (max-width: 1450px) {
+  .indexGrid aside .actu .pubResp {
+    display: block;
+    text-align: center;
+  }
+}
 .indexGrid aside div .appart {
   display: block;
   width: 90%;
@@ -536,8 +654,19 @@ main {
   padding: 50px 0px;
   padding-left: 50px;
 }
+@media screen and (max-width: 1450px) {
+  .indexGrid section {
+    padding-left: 0;
+  }
+}
 .indexGrid section h1 {
   text-align: center;
+}
+@media screen and (max-width: 650px) {
+  .indexGrid section h1 {
+    font-size: 3rem;
+    margin: 0 auto;
+  }
 }
 .indexGrid section p {
   padding: 15px 0px;
@@ -547,7 +676,7 @@ main {
   color: rgb(29, 32, 34);
   margin: 0 auto;
 }
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 666px) {
   .indexGrid section p {
     font-size: 1rem;
   }
@@ -567,6 +696,11 @@ main {
   font-family: "Roboto", sans-serif;
   color: #182C39;
   width: 80%;
+}
+@media screen and (max-width: 1450px) {
+  .indexGrid section h3 {
+    width: 100%;
+  }
 }
 .indexGrid section figure {
   display: flex;
@@ -597,14 +731,13 @@ main {
 }
 .indexGrid section .imgBox img {
   height: 200px;
+  width: 300px;
+  object-fit: cover;
 }
 @media screen and (max-width: 750px) {
   .indexGrid section .imgBox img {
-    width: 400px;
+    width: 300px;
   }
-}
-.indexGrid section .airbnb-embed-frame img {
-  width: 100%;
 }
 
 .appart {
@@ -654,6 +787,18 @@ main {
   height: 350px;
   width: 300px;
   object-fit: cover;
+}
+@media screen and (max-width: 900px) {
+  .fancyBox img {
+    width: 200px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .fancyBox img {
+    width: 100px;
+    height: 80px;
+  }
 }
 
 .quartier {
@@ -731,7 +876,7 @@ main {
 }
 
 .resa {
-  background: scroll no-repeat center/cover url(img/plan-montmartre.jpg);
+  background: scroll no-repeat bottom/cover url(img/plan-montmartre.jpg);
   padding: 100px;
 }
 @media screen and (max-width: 750px) {
@@ -757,6 +902,12 @@ main {
   }
 }
 @media screen and (max-width: 570px) {
+  .resa form {
+    min-width: 350px;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 400px) {
   .resa form {
     min-width: 0;
     width: 90%;
@@ -800,6 +951,11 @@ main {
   text-transform: uppercase;
   width: 100%;
 }
+@media screen and (max-width: 570px) {
+  .resa form .lettre .flexForm {
+    font-size: 0.8rem;
+  }
+}
 .resa form .lettre .flexForm input {
   width: 100%;
   height: 45px;
@@ -808,6 +964,12 @@ main {
   font-size: 1rem;
   font-weight: bold;
   margin: 5px 0 20px;
+}
+@media screen and (max-width: 570px) {
+  .resa form .lettre .flexForm input {
+    height: 30px;
+    margin: 5px auto;
+  }
 }
 .resa form .lettre .form-group {
   display: flex;
@@ -829,6 +991,12 @@ main {
   font-weight: bold;
   font-size: 1.7rem;
   letter-spacing: 2px;
+}
+@media screen and (max-width: 570px) {
+  .resa form input[type=submit] {
+    height: 30px;
+    font-size: 1.3rem;
+  }
 }
 .resa form input[type=submit]:hover {
   background-color: #C99D46;
@@ -893,12 +1061,6 @@ main {
   background: scroll no-repeat center/cover url(img/rue.jpg);
 }
 
-.burgerPos {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
 .menuBurger {
   display: none;
   height: 30px;
@@ -944,8 +1106,9 @@ main {
 
 .navDeroulant {
   display: none;
+  z-index: 100;
   position: absolute;
-  top: 100px;
+  bottom: -155px;
   left: 50%;
   transform: translateX(-50%);
   width: 300px;

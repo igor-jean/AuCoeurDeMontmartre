@@ -19,16 +19,22 @@
 </head>
 <body>
     <header id="header">
-        <div class="navDeroulant">
-            <ul>
-                <li><a href="index.php" <?php if($index){ echo "class='bold'";}?>>Accueil</a></li>  
-                <li><a href="quartier.php"<?php if($quartier){ echo "class='bold'";}?>>Quartier</a></li>
-                <li><a href="appartement.php" <?php if($appart){ echo "class='bold'";}?>>Appartement</a></li>
-                <li><a href="actualite.php" <?php if($actu){ echo "class='bold'";}?>>Actualités</a></li>
-                <li><a href="reservation.php" <?php if($resa){ echo "class='bold'";}?>>Réservation</a></li>
-            </ul>
-        </div>
         <div class="headerTop">
+            <div class="navDeroulant">
+                <ul>
+                    <li><a href="index.php" <?php if($index){ echo "class='bold'";}?>>Accueil</a></li>  
+                    <li><a href="quartier.php"<?php if($quartier){ echo "class='bold'";}?>>Quartier</a></li>
+                    <li><a href="appartement.php" <?php if($appart){ echo "class='bold'";}?>>Appartement</a></li>
+                    <li><a href="actualite.php" <?php if($actu){ echo "class='bold'";}?>>Actualités</a></li>
+                    <li><a href="reservation.php" <?php if($resa){ echo "class='bold'";}?>>Réservation</a></li>
+                    <li>
+                        <div class="searchBar">
+                            <input type="text" id="trainer" >
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <div class="flex container">
                 <a id="logo" href="index.php"><img src="img/logo.png" alt="Logo"></a>
                 <nav>
@@ -46,14 +52,21 @@
                         <li><a href="reservation.php" <?php if($resa){ echo "class='bold under'";}?>>Réservation</a></li>
                     </ul>
                 </nav>
-                <div>
+                <div class="searchBar">
                     <input type="text" id="trainer" onkeypress="checkEnter(event)">
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
-                <div>
+                <div class="reseaux">
                     <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
                     <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="burgerPos">
+                    <div class="menuBurger" onclick="menuBurger()">
+                        <div class="bar pos1"></div>
+                        <div class="bar pos2"></div>
+                        <div class="bar pos3"></div>
+                    </div>
                 </div>
             </div>
             <div id="easterEggContainer">
@@ -68,13 +81,6 @@
                     }
                 }
             </script>
-        </div>
-        <div class="burgerPos">
-            <div class="menuBurger" onclick="menuBurger()">
-                <div class="bar pos1"></div>
-                <div class="bar pos2"></div>
-                <div class="bar pos3"></div>
-            </div>
         </div>
         <script>
             var navBar = document.querySelector("nav");

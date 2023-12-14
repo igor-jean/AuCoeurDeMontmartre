@@ -2,7 +2,8 @@ header {
     background: scroll no-repeat center/cover url(img/homeBackground.jpg);
     height: 100vh;
     color: white;
-
+    position: relative;
+    z-index: 100;
 
     .headerTop {
         height: 150px;
@@ -12,20 +13,18 @@ header {
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 10;
+
+        .flex {
+            justify-content: space-between;
+        }
 
         @media screen and (max-width: 1040px) {
             height: 100px;
         }
 
-        >div {
+        >div:not(.navDeroulant) {
             height: 100%;
-            width: 90%;
             align-items: flex-start;
-
-            @media screen and (max-width: 1040px) {
-                justify-content: center;
-            }
         }
 
         #logo {
@@ -33,10 +32,6 @@ header {
 
             img {
                 height: 100%;
-
-                @media screen and (max-width: 1040px) {
-                    height: 100px;
-                }
             }
         }
     }
@@ -102,7 +97,7 @@ nav {
         }
 
         & li:nth-child(2) {
-            @media screen and (max-width: 1040px) {
+            @media screen and (max-width: 1400px) {
                 display: none;
             }
         }
@@ -111,8 +106,16 @@ nav {
     .navResp {
         display: none;
 
-        @media screen and (max-width: 1040px) {
+        @media screen and (max-width: 1400px) {
             display: block;
+        }
+
+        .searchBar {
+            @media screen and (max-width: 800px) {
+                width: 100%;
+                display: block;
+            }
+
         }
     }
 
@@ -168,19 +171,34 @@ nav {
 }
 
 // LIEN RESEAUX
-.headerTop>div>div:last-child {
+.reseaux {
     display: flex;
     justify-content: flex-end;
-    gap: 25px;
+    gap: 15px;
+
+    @media screen and (max-width: 360px) {
+        gap: 5px;
+    }
 
     .fa-brands {
+        display: block;
         font-size: 2rem;
+
+        @media screen and (max-width: 360px) {
+            font-size: 1.5rem;
+        }
     }
 
-    @media screen and (max-width: 1450px) {
-        display: none;
-
+    @media screen and (max-width: 1040px) {
+        position: absolute;
+        top: 60px;
+        left: 68%;
     }
+
+    @media screen and (max-width: 800px) {
+        position: unset;
+    }
+
 }
 
 #easterEggContainer {
